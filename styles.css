@@ -1,0 +1,236 @@
+:root {
+  --white: #ecebeb;
+  --black2: #030104;
+  --gray: #656464;
+  --black: #161310;
+}
+@font-face {
+  font-family: "font1";
+  src: url("fonts/me2.woff2");
+}
+@font-face {
+  font-family: "font2";
+  src: url("fonts/mo4.woff2");
+}
+@font-face {
+  font-family: "font3";
+  src: url("fonts/mo7.woff2");
+}
+@font-face {
+  font-family: "font4";
+  src: url("fonts/AtlassianSans-latin.woff2");
+}
+body,
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: var(--white);
+  font-family: font3, sans-serif;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-button {
+  display: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+a {
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+/* ---------- navbar -------------------- */
+nav {
+  padding: 1rem 0 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+.nav-text-above {
+  color: gray;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ---------------- hero-section ------------- */
+#hero-section {
+  height: 100dvh;
+  flex-direction: column;
+  justify-content: end;
+}
+.hero-image {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transform: scale(1.2);
+  object-fit: cover;
+  width: 200px;
+  height: 250px;
+}
+.hero-text {
+  line-height: 0.8 !important;
+  letter-spacing: -8px;
+  font: 500 15.4rem font1;
+  color: var(--black);
+  text-align: center;
+  margin-top: 5rem !important;
+}
+/* ---------- personal brief section -------------- */
+#brief-section {
+  flex-direction: column;
+  position: relative;
+  height: 100dvh;
+}
+.brief-text {
+  font: 500 3rem font1;
+  width: 70%;
+  text-align: center;
+  margin-top: 2rem !important;
+}
+.brief-text:last-child {
+  position: absolute;
+  opacity: 0;
+}
+
+/* ----------------- banner section ------------------ */
+.banner {
+  height: 200dvh;
+  width: 100%;
+}
+.banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------- video section -------------- */
+
+#video-section {
+  padding: 2.5rem 1.3rem 0 1.3rem;
+  gap: 1.3rem;
+  height: 100dvh;
+}
+._vi {
+  height: calc(100vh - 7.36vw);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#video-section div video {
+  width: 33.33vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----------- work-overview section -------------- */
+
+#work-overview-section {
+  height: 100dvh;
+  flex-direction: column;
+  justify-content: end;
+  margin-bottom: 1.5rem;
+}
+#work-overview-section img {
+  width: 230px;
+  height: 350px;
+  object-fit: cover;
+}
+.work-text-container {
+  text-align: center;
+  color: var(--gray);
+}
+.work-heading-container {
+  margin: 4rem 0 2rem 0;
+  font-size: 1.2rem;
+}
+.work-overview-heading {
+  transition: 0.3s;
+}
+.work-overview-text {
+  transition: 0.3s;
+  font: 4.33vh font1;
+  width: 70%;
+  text-align: center;
+  margin-top: 2rem !important;
+}
+.work-overview-heading:hover,
+.work-overview-text:hover {
+  color: var(--black);
+  cursor: pointer;
+}
+.work-overview-heading:active,
+.work-overview-text:active {
+  color: var(--black);
+}
+
+/* --------------- banner 2 ----------------- */
+#banner-2 {
+  position: relative;
+}
+.banner-card {
+  background-color: var(--white);
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  padding: 3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner-card p {
+  font: 100 2rem font1;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-top: 2rem !important;
+}
+.banner-card svg {
+  width: 7vw;
+}
+.social-profiles {
+  font: 300 0.8rem font4;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- last section --------------- */
+
+#last-section {
+  flex-direction: column;
+  height: 100dvh;
+}
+#last-section div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#last-section .hero-text {
+  margin: 0 !important;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+.footer-text-above {
+  color: var(--gray);
+}
