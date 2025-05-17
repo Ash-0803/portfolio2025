@@ -22,15 +22,15 @@
 }
 body,
 html {
-  /* scrollbar-width: none;
-  -ms-overflow-style: none; */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   background-color: var(--white);
   font-family: font3, sans-serif;
   box-sizing: border-box;
 }
 body::-webkit-scrollbar,
 body::-webkit-scrollbar-button {
-  /* display: none; */
+  display: none;
 }
 * {
   margin: 0;

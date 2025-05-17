@@ -57,7 +57,6 @@ function aboutAnimation() {
     trigger: "#brief-section",
     scroller: "body",
     pin: true,
-    markers: true,
   });
 }
 
@@ -101,10 +100,20 @@ function parallaxAnimation(banner) {
       willChange: "transform",
       scrollTrigger: {
         scrub: true,
-        markers: true,
         trigger: banner,
         scroller: "body",
       },
     }
   );
+}
+
+function workAnimation() {
+  const workLinks = $$(".work-overview-text");
+  workLinks.forEach((link) => {
+    link.addEventListener("pointerenter", (e) => {
+      gsap.to(link, {
+        color: "#00000",
+      });
+    });
+  });
 }
