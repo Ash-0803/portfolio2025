@@ -22,15 +22,15 @@
 }
 body,
 html {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  /* scrollbar-width: none;
+  -ms-overflow-style: none; */
   background-color: var(--white);
   font-family: font3, sans-serif;
   box-sizing: border-box;
 }
 body::-webkit-scrollbar,
 body::-webkit-scrollbar-button {
-  display: none;
+  /* display: none; */
 }
 * {
   margin: 0;
@@ -130,6 +130,7 @@ section {
 .banner {
   height: 200dvh;
   width: 100%;
+  overflow: hidden;
 }
 .banner img {
   object-fit: cover;
@@ -184,7 +185,6 @@ section {
 .work-overview-text {
   transition: 0.3s;
   font: clamp(2rem, 4.33vh, 4rem) font1;
-  width: 70%;
   text-align: center;
   margin-top: 2rem !important;
 }
