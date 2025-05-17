@@ -58,6 +58,13 @@ nav {
   justify-content: space-around;
   align-items: center;
   width: 100dvw;
+  /* this is not working as transparent background gives issues with mix-blend-mode */
+  mix-blend-mode: difference;
+}
+.nav-text-above,
+.nav-text-below {
+  /* filter: invert(100%); */
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
 .scrollbar-svg {
   width: 100%;
@@ -93,8 +100,8 @@ section {
 }
 .hero-text {
   line-height: 0.8 !important;
-  letter-spacing: -8px;
-  font: 500 15.4rem font1;
+  letter-spacing: -0.5vw;
+  font: 500 clamp(4rem, 15vw, 15.4rem) font1;
   color: var(--black);
   text-align: center;
   margin-top: 5rem !important;
@@ -106,14 +113,17 @@ section {
   height: 100dvh;
 }
 .brief-text {
-  font: 500 3rem font1;
-  width: 70%;
+  font: 500 clamp(1.5rem, 3vw, 3rem) font1;
   text-align: center;
   margin-top: 2rem !important;
+  letter-spacing: clamp(-1px, -0.2vw, -2px);
+  opacity: 1;
+  padding-inline: 11vw;
 }
 .brief-text:last-child {
   position: absolute;
   opacity: 0;
+  width: 80%;
 }
 
 /* ----------------- banner section ------------------ */
@@ -166,14 +176,14 @@ section {
 }
 .work-heading-container {
   margin: 4rem 0 2rem 0;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
 }
 .work-overview-heading {
   transition: 0.3s;
 }
 .work-overview-text {
   transition: 0.3s;
-  font: 4.33vh font1;
+  font: clamp(2rem, 4.33vh, 4rem) font1;
   width: 70%;
   text-align: center;
   margin-top: 2rem !important;
@@ -207,8 +217,8 @@ section {
   justify-content: space-between;
 }
 .banner-card p {
-  font: 100 2rem font1;
-  letter-spacing: -1px;
+  font: 100 clamp(1.2rem, 2vw, 2rem) font1;
+  letter-spacing: clamp(-0.5px, -0.1vw, -1px);
   text-align: center;
   margin-top: 2rem !important;
 }
@@ -216,7 +226,7 @@ section {
   width: 7vw;
 }
 .social-profiles {
-  font: 300 0.8rem font4;
+  font: 300 clamp(0.7rem, 0.8vw, 0.9rem) font4;
   display: flex;
   gap: 4px;
   flex-direction: column;
@@ -249,4 +259,5 @@ footer {
 }
 .footer-text-above {
   color: var(--gray);
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
