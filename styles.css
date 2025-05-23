@@ -73,9 +73,16 @@ nav {
 .scrollbar-svg path {
   stroke: var(--black);
   stroke-linecap: round;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-out;
 }
 .nav-text-above {
+  color: var(--gray);
+  display: block;
+}
+.nav-link-active {
+  color: var(--black2);
+}
+.nav-link-inactive {
   color: var(--gray);
 }
 
@@ -188,11 +195,11 @@ section {
   text-align: center;
   margin-top: 2rem !important;
 }
-.work-overview-heading:hover,
+/* .work-overview-heading:hover,
 .work-overview-text:hover {
   color: var(--black);
-  cursor: pointer;
-}
+  cursor: pointer; */
+/* } */
 .work-overview-heading:active,
 .work-overview-text:active {
   color: var(--black);

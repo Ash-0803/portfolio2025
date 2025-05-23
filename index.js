@@ -7,8 +7,11 @@ const lenis = new Lenis({
 });
 
 smoothScroll();
+workAnimation();
 scrollBarAnimation();
 aboutAnimation();
+svgAnimation();
+navigationMenu();
 parallaxAnimation("#banner-1");
 parallaxAnimation("#banner-2");
 
@@ -109,11 +112,43 @@ function parallaxAnimation(banner) {
 
 function workAnimation() {
   const workLinks = $$(".work-overview-text");
+  console.log(workLinks);
   workLinks.forEach((link) => {
     link.addEventListener("pointerenter", (e) => {
       gsap.to(link, {
-        color: "#00000",
+        color: "#161310",
+      });
+    });
+    link.addEventListener("pointerleave", (e) => {
+      gsap.to(link, {
+        color: "#656464",
       });
     });
   });
+}
+
+function navigationMenu() {
+  const links = $$(".nav-links a");
+  console.log(link);
+}
+
+function svgAnimation() {
+  gsap.fromTo(
+    "#main-svg",
+    {
+      rotation: -60,
+      scale: 0.9,
+    },
+    {
+      rotation: 60,
+      scale: 1.2,
+      ease: "none",
+      willChange: "transform",
+      scrollTrigger: {
+        trigger: "#main-svg",
+        scroller: "body",
+        scrub: 1,
+      },
+    }
+  );
 }
